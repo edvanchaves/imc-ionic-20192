@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>{{titulo}}</h2>
+  <ion-item>
+    <ion-label>Massa:</ion-label>
+    <ion-input placeholder="Digite sua massa" [(ngModel)]="massa" name="massa"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Altura:</ion-label>
+    <ion-input placeholder="Digite sua altura" [(ngModel)]="altura" name="altura"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Resultado: {{imc}} ({{situacao}})</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <button ion-button (click)="calcular()">Calcular</button>
+  </ion-item>
+</ion-content>
